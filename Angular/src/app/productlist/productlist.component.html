@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+   } 
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+  </style>
+</head>
+<body>
+  <h1><b>Welcome to abc mobiles</b></h1>
+  <h2>All range of mobiles are available here</h2>
+  <table align="center">
+    <tr>
+    </tr>
+      <tr><app-productitem *ngFor="let product of products"
+      [name]="product"
+      (added)="onadded($event)">
+      </app-productitem></tr>
+  </table>
+  <h3>Number of items in cart: {{added}}</h3>
+</body>
+</html>
+  
