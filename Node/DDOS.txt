@@ -1,0 +1,59 @@
+                                        DDOS
+                          
+What is a DDoS Attack?
+  A distributed denial-of-service (DDoS) attack is a malicious attempt to disrupt normal traffic of a targeted server, 
+service or network by overwhelming the target or its surrounding infrastructure with a flood of Internet traffic.
+DDoS attacks achieve effectiveness by utilizing multiple compromised computer systems as sources of attack traffic. 
+Exploited machines can include computers and other networked resources such as IoT devices. From a high level, 
+a DDoS attack is like a traffic jam clogging up with highway, preventing regular traffic from arriving at its
+desired destination.
+
+
+How does a DDoS attack work?
+   A DDoS attack requires an attacker to gain control of a network of online machines in order to carry out an attack. Computers and other machines (such as IoT devices) are infected with malware, turning each one into a bot (or zombie). 
+The attacker then has remote control over the group of bots, which is called a botnet.
+
+Once a botnet has been established, the attacker is able to direct the machines by sending updated instructions to 
+each bot via a method of remote control. When the IP address of a victim is targeted by the botnet, each bot will 
+respond by sending requests to the target, potentially causing the targeted server or network to overflow capacity, 
+resulting in a denial-of-service to normal traffic. Because each bot is a legitimate Internet device, separating 
+the attack traffic from normal traffic can be difficult.
+
+common types of DDoS attacks:
+1.Volume Based Attacks
+Includes UDP floods, ICMP floods, and other spoofed-packet floods. The attack’s goal is to saturate the bandwidth 
+of the attacked site, and magnitude is measured in bits per second (Bps).
+
+2.Protocol Attacks
+Includes SYN floods, fragmented packet attacks, Ping of Death, Smurf DDoS and more. This type of attack consumes 
+actual server resources, or those of intermediate communication equipment, such as firewalls and load balancers, 
+and is measured in packets per second (Pps).
+
+3.Application Layer Attacks
+Includes low-and-slow attacks, GET/POST floods, attacks that target Apache, Windows or OpenBSD vulnerabilities 
+and more. Comprised of seemingly legitimate and innocent requests, the goal of these attacks is to crash the 
+web server, and the magnitude is measured in Requests per second (Rps).
+
+
+What is the process for mitigating a DDoS attack?
+The key concern in mitigating a DDoS attack is differentiating between attack and normal traffic. For example, 
+if a product release has a company’s website swamped with eager customers, cutting off all traffic is a mistake. 
+If that company suddenly has a surge in traffic from known bad actors, efforts to alleviate an attack are probably 
+necessary. The difficulty lies it telling apart the real customer and the attack traffic.
+
+In the modern Internet, DDoS traffic comes in many forms. The traffic can vary in design from un-spoofed single 
+source attacks to complex and adaptive multi-vector attacks. A multi-vector DDoS attack uses multiple attack pathways 
+in order to overwhelm a target in different ways, potentially distracting mitigation efforts on any one trajectory. 
+An attack that targets multiple layers of the protocol stack at the same time, such as a DNS amplification 
+(targeting layers 3/4) coupled with a HTTP flood (targeting layer 7) is an example of multi-vector DDoS.
+
+Mitigating a multi-vector DDoS attack requires a variety of strategies in order to counter different trajectories. 
+Generally speaking, the more complex the attack, the more likely the traffic will be difficult to separate from 
+normal traffic - the goal of the attacker is to blend in as much as possible, making mitigation as inefficient 
+as possible. Mitigation attempts that involve dropping or limiting traffic indiscriminately may throw good traffic 
+out with the bad, and the attack may also modify and adapt to circumvent countermeasures. In order to overcome a 
+complex attempt at disruption, a layered solution will give the greatest benefit.
+Black Hole Routing
+Rate Limiting
+Web Application Firewall
+Anycast Network Diffusion
